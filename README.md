@@ -1,16 +1,35 @@
-# React + Vite
+# Catch Market — Perhiasan Buatan Tangan Eksklusif
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Catch Market adalah proyek situs web *Single Page Application* (SPA) yang dibangun untuk jaringan toko perhiasan artisanal. Website ini berfungsi sebagai platform layanan pelanggan sekaligus *showcase* katalog produk yang elegan dan misterius.
 
-Currently, two official plugins are available:
+## Teknologi yang Digunakan
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Proyek ini dibangun secara modern dengan fokus pada performa yang cepat dan desain antarmuka yang mulus:
 
-## React Compiler
+*   **React (v18)**: *Library* JavaScript utama untuk membangun antarmuka pengguna berbasis komponen (*Reusable Components*).
+*   **Vite**: Alat *build* generasi baru (*Build Tool*) yang membuat proses *compile* dan server lokal (HMR) berjalan super cepat.
+*   **React Router DOM**: Digunakan untuk sistem navigasi (*Routing*) agar perpindahan antar halaman (Beranda, Produk, Tentang Kami, dll.) tidak memerlukan proses *loading/refresh* (SPA).
+*   **Vanilla CSS**: Seluruh gaya, tata letak, dan tema (*styling*) dikodekan murni menggunakan CSS standar — memanfaatkan fitur modern seperti *CSS Variables/Design Tokens*, *Flexbox*, dan *CSS Grid*.
+*   **Intersection Observer API**: Digunakan lewat *custom hook* React (`useScrollReveal.js`) untuk memantau kapan suatu elemen masuk ke dalam layar pengguna, memicu animasi *fade-in* (*Scroll Animations*) yang halus.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Fitur Utama
 
-## Expanding the ESLint configuration
+*   **Desain Minimalis & Monokromatik**: Menggunakan pendekatan warna hitam, putih, dan abu-abu gelap dengan ruang kosong (*whitespace*) yang dramatis untuk menonjolkan visual perhiasan secara maksimal.
+*   **Katalog Interaktif**: Halaman *Produk* dilengkapi dengan tombol kategori (Filter) dan *Pop-up Modal* untuk melihat deskripsi detail dari setiap perhiasan.
+*   **Animasi Scroll**: Setiap elemen dan teks akan muncul secara bertahap saat Anda men-scroll halaman ke bawah.
+*   **Komponen Universal**: Bagian-bagian seperti Navigasi (*Header*), Kaki Halaman (*Footer*), Slider Testimoni, dan Formulir Kontak dikelola sebagai satu kesatuan komponen sehingga mudah dipakai ulang di berbagai halaman.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Cara Menjalankan Proyek Secara Lokal
+
+1. Pastikan komputer Anda telah terinstal **Node.js**.
+2. *Clone* atau unduh repositori ini.
+3. Buka terminal (atau *Command Prompt*) pada folder proyek ini.
+4. Instal semua paket yang dibutuhkan dengan menjalankan:
+   ```bash
+   npm install
+   ```
+5. Mulai jalankan *server* lokal dengan perintah:
+   ```bash
+   npm run dev
+   ```
+6. Buka *browser* Anda dan kunjungi tautan yang muncul (biasanya `http://localhost:5173/`).
